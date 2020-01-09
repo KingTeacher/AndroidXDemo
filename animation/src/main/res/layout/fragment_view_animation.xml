@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_translate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="平移动画"
+                android:background="#4CAF80"
+                android:textColor="#F5EFEF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_anim_translate_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="平移动画（代码实现）"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_scale"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="缩放动画"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_anim_scale_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="缩放动画（代码实现）"
+                android:background="#4CAF50"
+                android:textColor="#F5EFEF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_rotate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="旋转动画"
+                android:background="#4CAF50"
+                android:textColor="#F5EFEF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_anim_rotate_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="旋转动画（代码实现）"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_anim_alpha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="透明度动画"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_anim_alpha_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="透明度动画（代码实现）"
+                android:background="#4CAF50"
+                android:textColor="#F5EFEF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/iv_anim_list"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/workman_01"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

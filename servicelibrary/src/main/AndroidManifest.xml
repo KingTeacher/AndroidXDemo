@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.servicelibrary" >
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application>
+
+        <activity android:name=".OpenNotificationAndServiceActivity"/>
+        <activity android:name=".ShowResultActivity"/>
+        <service android:name="com.example.servicelibrary.service.ForegroundService"/>
+    </application>
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onclick_SendNormalNotification"
+        android:text="发送普通通知" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onclick_SendIntentNotification"
+        android:text="发送可跳转通知" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onclick_SendMyViewNotification"
+        android:text="发送自定义布局通知" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="openBackService"
+        android:text="startForeground方法启动服务正确方式" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="openBeforeService"
+        android:text="startForeground方法启动服务错误方式" />
+</LinearLayout>

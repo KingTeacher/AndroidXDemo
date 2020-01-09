@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true"
+    >
+<!--
+android:oneshot: false:播放完成后继续播放，true，播放结束后停留在最后一帧
+-->
+    <item android:duration="50" android:drawable="@drawable/workman_01"/>
+    <item android:duration="50" android:drawable="@drawable/workman_02"/>
+    <item android:duration="50" android:drawable="@drawable/workman_03"/>
+    <item android:duration="50" android:drawable="@drawable/workman_04"/>
+    <item android:duration="50" android:drawable="@drawable/workman_05"/>
+    <item android:duration="50" android:drawable="@drawable/workman_06"/>
+    <item android:duration="50" android:drawable="@drawable/workman_07"/>
+    <item android:duration="50" android:drawable="@drawable/workman_08"/>
+    <item android:duration="50" android:drawable="@drawable/workman_09"/>
+    <item android:duration="50" android:drawable="@drawable/workman_10"/>
+    <item android:duration="50" android:drawable="@drawable/workman_11"/>
+    <item android:duration="50" android:drawable="@drawable/workman_12"/>
+    <item android:duration="50" android:drawable="@drawable/workman_13"/>
+    <item android:duration="50" android:drawable="@drawable/workman_14"/>
+    <item android:duration="50" android:drawable="@drawable/workman_15"/>
+    <item android:duration="50" android:drawable="@drawable/workman_16"/>
+    <item android:duration="50" android:drawable="@drawable/workman_17"/>
+    <item android:duration="50" android:drawable="@drawable/workman_18"/>
+    <item android:duration="50" android:drawable="@drawable/workman_19"/>
+    <item android:duration="50" android:drawable="@drawable/workman_20"/>
+    <item android:duration="50" android:drawable="@drawable/workman_21"/>
+</animation-list>
