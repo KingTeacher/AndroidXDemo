@@ -1,0 +1,2 @@
+include ':app', ':animation', ':eventlibrary', ':servicelibrary'
+rootProject.name='MyAndroidXDemo'
