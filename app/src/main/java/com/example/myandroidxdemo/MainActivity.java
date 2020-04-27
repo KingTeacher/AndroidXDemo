@@ -8,6 +8,8 @@ import android.view.View;
 
 import com.example.animation.AnimationActivity;
 import com.example.eventlibrary.EventBusActivity;
+import com.example.module_webview.JsBridgeActivity;
+import com.example.myview.MyViewActivity;
 import com.example.servicelibrary.OpenNotificationAndServiceActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,12 +32,16 @@ public class MainActivity extends AppCompatActivity {
         startActivitys(EventBusActivity.class);
     }
 
-    public void onclickNotification(View view) {
-        startActivitys(OpenNotificationAndServiceActivity.class);
-    }
 
     public void onclickService(View view) {
         startActivitys(OpenNotificationAndServiceActivity.class);
     }
 
+    public void onclickMyview(View view) {
+        startActivitys(MyViewActivity.class);
+    }
+
+    public void onclickwebview(View view) {
+        startActivitys(JsBridgeActivity.class);
+    }
 }

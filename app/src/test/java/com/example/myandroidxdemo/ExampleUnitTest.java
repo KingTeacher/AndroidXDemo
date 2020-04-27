@@ -22,12 +22,8 @@ public class ExampleUnitTest {
 
     @Test
     public void addition_is() {
-        List<Basedata> lista = new ArrayList<>();
-        lista.add(new Basedata("a1",false,new ArrayList<Basedata>()));
-        lista.add(new Basedata("a2",true,new ArrayList<Basedata>()));
-        lista.add(new Basedata("a3",false,new ArrayList<Basedata>()));
+        removeDeleteItem("1",null,null);
 
-        removeDeleteItem(lista);
 
     }
 
@@ -71,22 +67,8 @@ public class ExampleUnitTest {
     /**
      * 将delete为true项数据删除
      */
-    private static void removeDeleteItem(List<Basedata> list){
-        if(list == null || list.size() <= 0){
-            return;
-        }
-        Iterator<Basedata> iterator = list.iterator();
-        while (iterator.hasNext()) {
-            Basedata item = iterator.next();
-            if (item != null) {
-                if(item.isBbb()){
-                    iterator.remove();
-                }
-                if(item.getSublist() != null && item.getSublist().size() > 0){
-                    removeDeleteItem(item.getSublist());
-                }
-            }
-        }
+    private static void removeDeleteItem(String... list){
+        System.out.println("长度："+list.length);
     }
 
 }

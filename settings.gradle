@@ -1,2 +1,4 @@
-include ':app', ':animation', ':eventlibrary', ':servicelibrary'
+include ':app', ':module_animation', ':module_eventlibrary', ':module_servicelibrary'
 rootProject.name='MyAndroidXDemo'
+include ':module_myview'
+include ':module_webview'
