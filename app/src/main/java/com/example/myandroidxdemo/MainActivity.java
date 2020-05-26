@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.animation.AnimationActivity;
 import com.example.eventlibrary.EventBusActivity;
 import com.example.module_webview.JsBridgeActivity;
+import com.example.module_weex.WeexDemoActivity;
 import com.example.myview.MyViewActivity;
 import com.example.servicelibrary.OpenNotificationAndServiceActivity;
 
@@ -43,5 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclickwebview(View view) {
         startActivitys(JsBridgeActivity.class);
+    }
+
+    public void onclickweek(View view) {
+        startActivitys(WeexDemoActivity.class);
     }
 }

@@ -2,3 +2,4 @@ include ':app', ':module_animation', ':module_eventlibrary', ':module_servicelib
 rootProject.name='MyAndroidXDemo'
 include ':module_myview'
 include ':module_webview'
+include ':module_weex'
