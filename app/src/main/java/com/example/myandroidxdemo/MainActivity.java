@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.animation.AnimationActivity;
 import com.example.eventlibrary.EventBusActivity;
+import com.example.module_rxjava.activity.RxJavaActivity;
 import com.example.module_webview.JsBridgeActivity;
 import com.example.module_weex.WeexDemoActivity;
 import com.example.myview.MyViewActivity;
@@ -48,5 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclickweek(View view) {
         startActivitys(WeexDemoActivity.class);
+    }
+
+    public void onclickrxjava(View view) {
+        startActivitys(RxJavaActivity.class);
     }
 }

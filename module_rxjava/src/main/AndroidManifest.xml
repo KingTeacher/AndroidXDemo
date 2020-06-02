@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.module_rxjava" >
+    <application >
+        <activity android:name=".activity.RxJavaActivity"/>
+    </application>
+</manifest>

@@ -1,0 +1,21 @@
+操作符介绍：
+官方介绍：http://reactivex.io/documentation/operators.html#filtering
+1、Create：是最常见的操作符了，主要用于创建一个Obserable,参考：Demo10_1;
+2、Map：是对上游发送的每一个事件应用一个函数, 使得每一个事件都按照指定的函数去变化,参考：Demo10_2;
+3、FlatMap：可以把一个发射器Observable通过某种方法转换为多个Observables然后再把这些分散的Observables装进一个单一的
+           发射器Observable。但有个需要注意的是，flatMap并不能保证事件的顺序，参考：Demo10_3;
+4、ConcatMap：concatMap与FlatMap的唯一区别就是concatMap能保证顺序，参考：Demo10_4;
+5、Zip：通过一个函数将多个Observable发送的事件结合到一起，然后发送这些组合到一起的事件.它按照严格的顺序应用这个函数。
+       它只发射与发射数据项最少的那个Observable一样多的数据，参考：Demo10_5;
+6、Concat：只是单纯的把两个发射器连接成一个发射器，参考：Demo10_6;
+7、distinct：简单的去重，参考：Demo10_7；
+8、Filter:可以接受一个参数，让其过滤掉不符合我们条件的值，参考：Demo10_8;
+9、buffer：操作符接受两个参数，buffer(count,skip)，作用是将Observable中的数据按skip(步长)分成最大不超过count的buffer，参考：Demo10_9;
+10、timer:一个定时任务，参考：Demo10_10;
+11、interval：用于间隔时间执行某个操作，其接受三个参数，分别是第一次发送延迟，间隔时间，时间单位，参考：Demo10_11;
+12、doOnNext：让订阅者在接收到数据之前干点有意思的事情，参考：Demo10_12;
+13、skip：skip 很有意思，其实作用就和字面意思一样，接受一个 long 型参数 count ，代表跳过 count 个数目开始接收，参考：Demo10_13;
+14、take：take，接受一个 long 型参数 count ，代表至多接收 count 个数据，参考：Demo10_14;
+15、just：就是一个简单的发射器依次调用 onNext() 方法，参考：Demo10_12;
+16、retryWhen：
+17、

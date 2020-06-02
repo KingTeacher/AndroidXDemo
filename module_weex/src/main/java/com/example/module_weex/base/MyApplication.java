@@ -76,7 +76,7 @@ public class MyApplication extends Application {
             //Typeface nativeFont = Typeface.createFromAsset(getAssets(), "font/native_font.ttf");
             //WXEnvironment.setGlobalFontFamily("bolezhusun", nativeFont);
 
-            startHeron();
+//            startHeron();
 
 //        } catch (WXException e) {
 //            e.printStackTrace();
