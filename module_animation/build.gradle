@@ -1,29 +1,129 @@
+/**
+ * 构建配置的第一行将Android插件应用于 扩展到此版本，并使android块可用于指定 特定于Android的构建选项。
+ */
 apply plugin: 'com.android.library'
 
+/**
+ * android块是您配置所有特定于Android的地方构建选项。
+ */
 android {
+    /**
+     * compileSdkVersion指定Gradle应该使用的Android API级别编译您的应用程序。这意味着您的应用可以使用其中包含的API功能和此API级别及更低。
+     */
     compileSdkVersion 29
+    /**
+     * buildToolsVersion指定SDK生成工具的版本，命令行Gradle用于构建应用程序的实用程序和编译器。你需要使用SDK Manager下载构建工具。
+     * 此属性是可选的，因为插件默认情况下使用推荐的版本为构建工具。
+     */
     buildToolsVersion "29.0.2"
 
-
+    /**
+     * defaultConfig块封装了所有的默认设置和条目构建变体，并且可以覆盖main / AndroidManifest.xml中的某些属性
+     * 从构建系统动态地。您可以配置产品口味以覆盖这些值适用于您应用的不同版本。
+     */
     defaultConfig {
+        /**
+         * applicationId唯一标识要发布的包。 但是，您的源代码仍应引用程序包名称由main / AndroidManifest.xml文件中的package属性定义。
+         */
+//        applicationId 'com.example.myandroidxdemo'
+        /**
+         * 定义运行应用程序所需的最低API级别。
+         */
         minSdkVersion 21
+        /**
+         * 指定用于测试应用程序的API级别。
+         */
         targetSdkVersion 29
+        /**
+         * 定义您的应用程序的版本号。
+         */
         versionCode 1
+        /**
+         * 为您的应用定义用户友好的版本名称。
+         */
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
 
+    /**
+     * 您可以在buildTypes块中配置多种构建类型。默认情况下，构建系统定义两种构建类型：调试和发布。默认版本配置中未明确显示
+     * 调试版本类型，但其中包含调试工具，并使用调试密钥进行了签名。发布构建类型适用Proguard设置，并且默认情况下未签名。
+     */
     buildTypes {
+        /**
+         * 默认情况下，Android Studio将发布版本类型配置为启用代码使用minifyEnabled缩小，并指定默认的Proguard规则文件。
+         */
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
-}
+    /**
+     * 您可以在productFlavors块中配置多种产品变种。这使您可以创建应用的不同版本，用自己的设置覆盖defaultConfig块。
+     * 产品维度是可选的，系统默认不会创建它们。需要我们手动创建
+     * 此示例创建了免费和付费的产品样式。每种产品的味道然后指定其自己的应用程序ID，以便它们可以在Google上存在同时存放
+     * Play商店或Android设备。如果声明产品口味，则还必须声明口味尺寸并将每种风味分配给风味维度。
+     */
+    /**
+     * 指定该项目的产品变种维度的名称
+     * 使用Android插件3.0.0及更高版本配置产品变种时，您必须使用flavorDimensions属性至少指定一个变种维度，
+     * 然后将每个变种分配给一个维度。否则，您将收到以下构建错误:
+     * Error:All flavors must now belong to a named flavor dimension.
+     * The flavor 'flavor_name' is not assigned to a flavor dimension.
+     */
+//    flavorDimensions 'api', 'version'
+    /**
+     * 默认情况下，当您仅指定一个维度时，您配置的所有样式都会自动属于该维度。如果指定多个维度，则需要手动将每种产品变种分配给
+     * 一个维度，如下面的示例所示。
+     * flavorDimensions允许您创建可以与其他flavorDimensions的flavor组合的productFlavors组。
+     * 例如，您可以具有一个维度，其中包括应用程序的“免费”和“付费”版本，而另一个维度用于支持不同API级别的风味
+     * （例如“ minApi21”和“ minApi24”）。然后，Android插件可以结合这些方面的风味（包括其设置，代码和资源）来创建变体，
+     * 例如“ debugFreeMinApi21”和“releasePaidMinApi24”等。下面的示例向您展示如何指定flavorDimension以及如何向
+     * 其中添加productFlavor。
+     */
+//    productFlavors {
+//        demo {
+//            // 将此产品变种分配给“version”组
+//            dimension 'version'
+//        }
+//        full {
+//            dimension 'version'
+//        }
+//        minApi24 {
+//            // 将此产品变种分配给“api”组
+//            dimension 'api'
+//            minSdkVersion '24'
+//            versionNameSuffix "-minApi24"
+//        }
+//        minApi21 {
+//            dimension "api"
+//            minSdkVersion '21'
+//            versionNameSuffix "-minApi21"
+//        }
+//    }
 
+    /**
+     * 您可以在splits块中配置不同的APK版本， *每个仅包含代码和资源以实现受支持的屏幕密度，或者ABI。您还需要配置构建，
+     * 以便每个APK都有一个不同的versionCode。
+     */
+    splits {
+        // 用于根据屏幕密度构建多个APK的设置。
+        density {
+            // 启用或禁用构建多个APK。
+            enable false
+            // 构建多个APK时，请排除这些密度。
+            exclude "ldpi", "tvdpi", "xxxhdpi", "400dpi", "560dpi"
+        }
+    }
+
+
+}
+/**
+ * 模块级构建配置文件中的依赖项块指定仅构建模块本身所需的依赖项。 要了解更多信息，请转到添加构建依赖项。
+ */
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

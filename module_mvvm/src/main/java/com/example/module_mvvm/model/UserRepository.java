@@ -8,9 +8,12 @@ public class UserRepository {
 
     public static UserProfile getUserProfile() {
         if (userProfile == null){
-            userProfile = new UserProfile("111", "花千骨", "11", "女", "大宋", "111", "12312312312", 1, "aaaa@222.com", "aaa");
+            userProfile = new UserProfile("111", "花千骨", "11", "女", "大宋", "12312312312");
         }
         return userProfile;
     }
 
+    public static void setUserProfile(UserProfile userProfile) {
+        UserRepository.userProfile = userProfile;
+    }
 }

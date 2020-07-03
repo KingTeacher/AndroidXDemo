@@ -1,3 +1,8 @@
+include ':module_mvvm'
+include ':module_viewbinding'
+include ':module_architecture'
+include ':module_viewmodel'
+include ':module_degger'
 include ':app', ':module_animation', ':module_eventlibrary', ':module_servicelibrary'
 rootProject.name='MyAndroidXDemo'
 include ':module_myview'

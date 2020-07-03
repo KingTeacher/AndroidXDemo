@@ -1,28 +1,25 @@
 package com.example.module_mvvm.model.bean;
 
-public class UserProfile {
+import androidx.annotation.NonNull;
+
+public class UserProfile implements Cloneable {
     private String id;
     private String name;
     private String age;
     private String sex;
     private String cityName;
-    private String cityId;
     private String phone;
-    private int workYears;
-    private String email;
-    private String headImg;
 
-    public UserProfile(String id, String name, String age, String sex, String cityName, String cityId, String phone, int workYears, String email, String headImg) {
+    public UserProfile() {
+    }
+
+    public UserProfile(String id, String name, String age, String sex, String cityName, String phone) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.sex = sex;
         this.cityName = cityName;
-        this.cityId = cityId;
         this.phone = phone;
-        this.workYears = workYears;
-        this.email = email;
-        this.headImg = headImg;
     }
 
     public String getId() {
@@ -65,14 +62,6 @@ public class UserProfile {
         this.cityName = cityName;
     }
 
-    public String getCityId() {
-        return cityId;
-    }
-
-    public void setCityId(String cityId) {
-        this.cityId = cityId;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -81,27 +70,9 @@ public class UserProfile {
         this.phone = phone;
     }
 
-    public int getWorkYears() {
-        return workYears;
-    }
-
-    public void setWorkYears(int workYears) {
-        this.workYears = workYears;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getHeadImg() {
-        return headImg;
-    }
-
-    public void setHeadImg(String headImg) {
-        this.headImg = headImg;
+    @NonNull
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

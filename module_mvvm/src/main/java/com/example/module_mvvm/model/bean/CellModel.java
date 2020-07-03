@@ -1,5 +1,9 @@
 package com.example.module_mvvm.model.bean;
 
+import android.view.View;
+
+import androidx.lifecycle.MutableLiveData;
+
 public class CellModel {
     private String title;
     private String value;
@@ -7,15 +11,17 @@ public class CellModel {
     private boolean isShowIcon;
     private boolean isShowError;
     private String tips;
+    private View.OnClickListener clickListener;
 
-    public CellModel(String title, String value, boolean isShowIcon, boolean isShowError, String tips) {
+
+    public CellModel(String title, String value, boolean isShowIcon,View.OnClickListener clickListener) {
         this.title = title;
         this.value = value;
         this.hintValue = value;
         this.isShowIcon = isShowIcon;
-        this.isShowError = isShowError;
-        this.tips = tips;
+        this.clickListener = clickListener;
     }
+
 
     public String getTitle() {
         return title;
@@ -41,6 +47,24 @@ public class CellModel {
         isShowIcon = showIcon;
     }
 
+
+    public String getHintValue() {
+        return hintValue;
+    }
+
+    public void setHintValue(String hintValue) {
+        this.hintValue = hintValue;
+    }
+
+
+    public View.OnClickListener getClickListener() {
+        return clickListener;
+    }
+
+    public void setClickListener(View.OnClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
     public boolean isShowError() {
         return isShowError;
     }
@@ -55,13 +79,5 @@ public class CellModel {
 
     public void setTips(String tips) {
         this.tips = tips;
-    }
-
-    public String getHintValue() {
-        return hintValue;
-    }
-
-    public void setHintValue(String hintValue) {
-        this.hintValue = hintValue;
     }
 }

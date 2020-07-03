@@ -32,6 +32,7 @@ public class ContainerAdapter extends RecyclerView.Adapter<ContainerAdapter.Cell
     @Override
     public void onBindViewHolder(@NonNull CellModelViewHolder holder, int position) {
         holder.getItemBinding().setCellModel(cellModels.get(position));
+        holder.getItemBinding().getRoot().setOnClickListener(cellModels.get(position).getClickListener());
     }
 
     @Override

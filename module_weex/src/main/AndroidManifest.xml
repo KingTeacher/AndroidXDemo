@@ -7,9 +7,4 @@
 <!--sd卡读写-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <application
-        android:name=".base.MyApplication">
-        <activity android:name=".WeexDemoActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-    </application>
 </manifest>

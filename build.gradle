@@ -1,19 +1,37 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"//引入配置的gradle
 
+/**
+ * 在buildscript块中，您可以配置存储库和Gradle本身的依赖关系-意味着，您不应包含依赖关系用于此处的模块。例如，此块包含
+ * 用于Gradle作为依赖项，因为它提供了Gradle的附加说明需要构建Android应用模块。
+ */
 buildscript {
+    /**
+     * 存储库块配置Gradle用来存储的存储库搜索或下载依赖项。Gradle预配置对远程的支持存储库，
+     * 例如JCenter，Maven Central和Ivy。您也可以使用本地存储库或定义自己的远程存储库。
+     * 下面的代码定义将JCenter、google()和自定义的作为Gradle的存储库来查找其依赖项。
+     */
     repositories {
         google()
         jcenter()
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
         
     }
+    /**
+     * 依赖关系块配置Gradle需要使用的依赖关系建立您的项目。以下行为Gradle添加了Android插件版本4.0.0作为类路径依赖项。
+     */
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.1'
-        
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:4.0.0'
+        /**
+         * 注意：不要将您的应用程序依赖项放在这里；它们属于在单独的模块build.gradle文件中
+         */
     }
 }
 
+/**
+ * allprojects块是您配置存储库和项目中所有模块使用的依赖项，例如第三方插件或库。但是，您应该在每个模块级的build.gradle文件。
+ * 对于新项目，Android Studio默认情况下包括JCenter和Google的Maven存储库，但不包括配置任何依赖项（除非您选择需要一些依赖项的模板）。
+ */
 allprojects {
     repositories {
         google()
