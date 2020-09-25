@@ -21,7 +21,7 @@ buildscript {
      * 依赖关系块配置Gradle需要使用的依赖关系建立您的项目。以下行为Gradle添加了Android插件版本4.0.0作为类路径依赖项。
      */
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:4.0.1'
         /**
          * 注意：不要将您的应用程序依赖项放在这里；它们属于在单独的模块build.gradle文件中
          */

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.animation.R;
 
 
@@ -29,6 +30,13 @@ public class LottieAnimationFragment extends Fragment {
     }
 
     private void initView(View view) {
+        final LottieAnimationView lottie1 = view.findViewById(R.id.lottie1);
+        lottie1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lottie1.playAnimation();
+            }
+        });
 
     }
 

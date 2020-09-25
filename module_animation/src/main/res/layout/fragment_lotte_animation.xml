@@ -22,9 +22,9 @@
             android:orientation="horizontal">
 
             <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                app:lottie_autoPlay="true"
                 app:lottie_fileName="data1.json"
                 app:lottie_loop="true" />
 

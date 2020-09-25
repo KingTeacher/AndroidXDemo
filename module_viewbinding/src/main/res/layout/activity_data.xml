@@ -9,9 +9,6 @@
             name="user"
             type="com.example.module_viewbinding.bean.User" />
 
-        <variable
-            name="Scores"
-            type="com.example.module_viewbinding.bean.Scores" />
 
         <variable
             name="view"
@@ -85,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="257dp"
             android:hint="输入按钮名字"
+            android:text="aaaa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,11 +92,11 @@
             android:id="@+id/bt_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="664dp"
+            android:layout_marginBottom="184dp"
             android:text="@{etName.text}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.897"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

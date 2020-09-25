@@ -2,6 +2,7 @@ package com.example.animation.fragment;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -123,6 +124,18 @@ public class ViewAnimationFragment extends Fragment implements View.OnClickListe
         }else if (id == R.id.iv_anim_list){
             ivAnimList.setImageResource(R.drawable.anim_list);
             AnimationDrawable animationDrawable = (AnimationDrawable)ivAnimList.getDrawable();
+            animationDrawable.unscheduleSelf(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("aaaaa","unscheduleSelf");
+                }
+            });
+            animationDrawable.scheduleSelf(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("aaaaa","scheduleSelf");
+                }
+            },0);
             animationDrawable.start();
         }
 

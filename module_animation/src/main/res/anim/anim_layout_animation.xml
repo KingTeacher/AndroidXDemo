@@ -13,6 +13,9 @@
         random：表示随机播放入场动画
     android:animation   为子元素指定具体的入场动画
 -->
+    <translate
+        android:fromXDelta="100%"
+        android:toXDelta="0"/>
 
 
 </layoutAnimation>
